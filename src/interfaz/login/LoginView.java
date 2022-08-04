@@ -7,6 +7,7 @@ public class LoginView extends JFrame {
 	
 	private JTextField userInput;
 	private JPasswordField passInput;
+	private JButton loginButton;
 	
 	public LoginView() {
 		
