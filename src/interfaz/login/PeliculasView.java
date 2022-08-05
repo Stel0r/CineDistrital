@@ -4,11 +4,18 @@ import java.awt.Color;
 
 import javax.swing.*;
 
+import Services.servicioGrafico;
+
 public class PeliculasView extends JFrame{
 
+	private servicioGrafico gService;
 	private JPanel pnlPeliculas;
+	private JButton btnPeliculas,btnSnacks;
+	
 	
 	public PeliculasView() {
+		
+		gService = servicioGrafico.obtenerServicio();
 		
 		this.setSize(1280, 720);
 		this.getContentPane().setBackground(new Color(53, 53, 53));
@@ -18,11 +25,20 @@ public class PeliculasView extends JFrame{
 		pnlPeliculas = new JPanel();
 		pnlPeliculas.setBackground(new Color(53, 53, 53));
 		pnlPeliculas.setLayout(null);
+		
+		
+		btnPeliculas = gService.crear_Boton1("Cartelera",50,200,new Color(53, 53, 53) , Color.white,Color.white);
+		btnPeliculas.setLocation(200, 0);
+		btnPeliculas.addActionListener(null);
+		this.add(btnPeliculas);
+		
+		btnSnacks = gService.crear_Boton1("Snacks",50,200,new Color(53, 53, 53) , Color.white,Color.white);
+		btnSnacks.setLocation(400, 0);
+		btnSnacks.addActionListener(null);
+		this.add(btnSnacks);
+
+		
 		this.add(pnlPeliculas);
-		
-		this.crear_Boton("btnPeliculas", "Cartelera", 150, 0, 40, 150,pnlPeliculas);
-		this.crear_Boton("btnSnacks", "Snacks", 301, 0, 40, 150,pnlPeliculas);
-		
 		this.setVisible(true);
 		
 		
