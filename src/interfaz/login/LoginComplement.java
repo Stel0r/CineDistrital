@@ -7,7 +7,6 @@ public class LoginComplement implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		//logica para log in de usuarios
 		
 	}
 
