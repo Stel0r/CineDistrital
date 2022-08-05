@@ -20,30 +20,14 @@ public class servicioGrafico {
 		return service;
 	}
 	
-	public JButton crear_Boton(String texto,int x, int y, int alto, int ancho, JComponent destino,Color col,Color colLetra) {
-		
-		JButton nombre = new JButton(texto);
-		nombre.setBounds(x,y,ancho,alto);
-		nombre.setBorder(BorderFactory.createLineBorder(Color.BLACK, 0, true));
-		nombre.setBackground(col);
-		nombre.setForeground(colLetra);
-		
-		destino.add(nombre);
-		
-		return nombre;
-		
-	}
 	
-	public JButton crear_Boton_centro(String texto, int y,int alto, int ancho, JComponent destino,Color col,Color colLetra) {
+	public JButton crear_Boton1(String texto, int y,int alto, int ancho,Color col,Color colLetra,Color colBorde) {
 		
 		JButton nombre = new JButton(texto);
 		nombre.setSize(ancho,alto);
-		nombre.setLocation(destino.getSize().width/2-ancho/2,y);
-		nombre.setBorder(BorderFactory.createLineBorder(Color.BLACK, 0, true));
+		nombre.setBorder(BorderFactory.createLineBorder(colBorde, 0, true));
 		nombre.setBackground(col);
 		nombre.setForeground(colLetra);
-		
-		destino.add(nombre);
 		
 		return nombre;
 	}

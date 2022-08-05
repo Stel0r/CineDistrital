@@ -11,10 +11,12 @@ public class LoginView extends JFrame {
 	private JPasswordField passInput;
 	private JButton loginButton;
 	private servicioGrafico gService;
+	private LoginComplement loginComplement;
 	
-	public LoginView() {
+	public LoginView(LoginComplement lc) {
 		
 		gService = servicioGrafico.obtenerServicio();
+		loginComplement = lc;
 		
 		this.setSize(750, 628);
 		this.getContentPane().setBackground(new Color(53, 53, 53));
@@ -33,13 +35,9 @@ public class LoginView extends JFrame {
 		this.add(passInput);
 		
 		
-		//loginButton = gService.crear_Boton_centro("Ëntrar", 450, 35, 150, this,new Color(53, 53, 53) , Color.white);
-		
-		loginButton = new JButton("Entrar");
-		loginButton.setSize(150,35);
-		loginButton.setBackground(new Color(53, 53, 53));
-		loginButton.setForeground(Color.white);
-		loginButton.setLocation((this.getSize().width/2)-loginButton.getSize().width/2, 450);
+		loginButton = gService.crear_Boton1("Ëntrar", 450, 35, 150,new Color(53, 53, 53) , Color.white,Color.white);
+		loginButton.setLocation(this.getSize().width/2-loginButton.getWidth()/2,450);
+		loginButton.addActionListener(null);
 		this.add(loginButton);
 		
 		this.setVisible(true);
