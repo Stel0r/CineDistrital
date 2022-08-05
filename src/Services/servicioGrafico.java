@@ -21,7 +21,7 @@ public class servicioGrafico {
 	}
 	
 	
-	public JButton crear_Boton1(String texto, int y,int alto, int ancho,Color col,Color colLetra,Color colBorde) {
+	public JButton crear_Boton1(String texto,int alto, int ancho,Color col,Color colLetra,Color colBorde) {
 		
 		JButton nombre = new JButton(texto);
 		nombre.setSize(ancho,alto);
