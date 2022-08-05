@@ -35,7 +35,7 @@ public class LoginView extends JFrame {
 		this.add(passInput);
 		
 		
-		loginButton = gService.crear_Boton1("Ëntrar", 450, 35, 150,new Color(53, 53, 53) , Color.white,Color.white);
+		loginButton = gService.crear_Boton1("Ëntrar", 450, 35,new Color(53, 53, 53) , Color.white,Color.white);
 		loginButton.setLocation(this.getSize().width/2-loginButton.getWidth()/2,450);
 		loginButton.addActionListener(null);
 		this.add(loginButton);
