@@ -16,9 +16,12 @@ public class PeliculasView extends JFrame{
 		this.setTitle("Cartelera");
 		
 		pnlPeliculas = new JPanel();
-		pnlPeliculas.setBackground(Color.GRAY);
+		pnlPeliculas.setBackground(new Color(53, 53, 53));
 		pnlPeliculas.setLayout(null);
 		this.add(pnlPeliculas);
+		
+		this.crear_Boton("btnPeliculas", "Cartelera", 150, 0, 40, 150,pnlPeliculas);
+		this.crear_Boton("btnSnacks", "Snacks", 301, 0, 40, 150,pnlPeliculas);
 		
 		this.setVisible(true);
 		
@@ -81,16 +84,16 @@ public class PeliculasView extends JFrame{
 //		
 //	}
 //	
-//	public void crear_Boton(String nombre1,String texto,int x, int y, int alto, int ancho, JPanel destino) {
-//		
-//		JButton nombre = new JButton();
-//		nombre.setBounds(x,y,ancho,alto);
-//		nombre.setText(texto);
-//		nombre.setBorder(BorderFactory.createLineBorder(Color.BLACK, 0, true));
-//		destino.add(nombre);
-//		
-//		
-//
-//	}
+	public void crear_Boton(String nombre1,String texto,int x, int y, int alto, int ancho, JPanel destino) {
+		
+		JButton nombre = new JButton();
+		nombre.setBounds(x,y,ancho,alto);
+		nombre.setText(texto);
+		nombre.setBorder(BorderFactory.createLineBorder(Color.BLACK, 0, true));
+		destino.add(nombre);
+		
+		
+
+	}
 }	
 	
