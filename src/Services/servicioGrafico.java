@@ -21,12 +21,13 @@ public class servicioGrafico {
 	}
 	
 	
-	public JButton crear_Boton1(String texto, int y,int alto, int ancho,Color col,Color colLetra,Color colBorde) {
+	public JButton crear_Boton1(String texto,int alto, int ancho,Color col,Color colLetra,Color colBorde) {
 		
 		JButton nombre = new JButton(texto);
 		nombre.setSize(ancho,alto);
-		nombre.setBorder(BorderFactory.createLineBorder(colBorde, 0, true));
+		nombre.setBorder(BorderFactory.createLineBorder(colBorde, 2, true));
 		nombre.setBackground(col);
+		nombre.setFocusable(false);
 		nombre.setForeground(colLetra);
 		
 		return nombre;
