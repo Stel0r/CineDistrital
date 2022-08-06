@@ -25,8 +25,9 @@ public class servicioGrafico {
 		
 		JButton nombre = new JButton(texto);
 		nombre.setSize(ancho,alto);
-		nombre.setBorder(BorderFactory.createLineBorder(colBorde, 0, true));
+		nombre.setBorder(BorderFactory.createLineBorder(colBorde, 2, true));
 		nombre.setBackground(col);
+		nombre.setFocusable(false);
 		nombre.setForeground(colLetra);
 		
 		return nombre;
